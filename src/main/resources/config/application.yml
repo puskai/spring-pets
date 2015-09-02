@@ -1,0 +1,28 @@
+management:
+    contextPath: /actuator
+    
+server.port: 8076
+endpoints:
+    restart:
+        enabled: true
+    shutdown:
+        enabled: true
+spring:
+    application:
+        name: pets
+    data.rest.basePath: /api
+    datasource:
+        driverClassName: com.mysql.jdbc.Driver
+        testOnBorrow: true
+        validationInterval: 34000
+        validationQuery: SELECT 1
+    jpa:
+        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        hibernate:
+            ddl-auto: update
+        open-in-view: true
+        properties:
+            jadira.usertype.autoRegisterUserTypes: true
+            javax.persistence.validation.mode: none
+
+          
